@@ -1,0 +1,6 @@
+﻿- Name: GunelineMk2
+  Version: 1.0.0
+  DLL: bin/Debug/GunelineMk2.dll
+  Dependencies:
+    - Name: Everest
+      Version: 1.3761.0
