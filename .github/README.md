@@ -1,7 +1,8 @@
-> [!WARNING]
-> **Carbon** is under heavy development.
+# Guneline
 
-# carbon
+Guneline is a simple Celeste mod that adds a gun to the game.
 
-Carbon is a modular content mod that aims to offer smaller, "bite-sized" content additions that stand independently of one another. These additions are meant to be configurable, allowing players to pick and choose what parts of the mod are actually added to the game. "Modules" may or may not interact with one another. TBD.
+### Features:
+- A gun capable of destroying most non-solid obstacles in the game.
+- CelesteNet compatibility: have gunfights with your friends!
 
