@@ -1,0 +1,6 @@
+- Name: Guneline
+  Version: 1.0.0
+  DLL: Guneline.dll
+  Dependencies:
+    - Name: Everest
+      Version: 1.0.0

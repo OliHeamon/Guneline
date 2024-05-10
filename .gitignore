@@ -1,0 +1,11 @@
+# Auto-generated IDE files and caches.
+.vs/
+.vscode/
+.idea/
+
+# Build outputs and adjacent.
+bin/
+obj/
+
+# User-specific files.
+*.user
