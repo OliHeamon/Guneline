@@ -1,7 +1,6 @@
 ﻿using Celeste.Mod.CelesteNet;
 using Celeste.Mod.CelesteNet.DataTypes;
 using Microsoft.Xna.Framework;
-using System.IO;
 
 namespace Guneline
 {
@@ -16,13 +15,13 @@ namespace Guneline
             DataID = "gunmodShot";
         }
 
-        public override void Read(DataContext ctx, BinaryReader reader)
+        protected override void Read(CelesteNetBinaryReader reader)
         {
             Facing = reader.ReadInt32();
             CursorPos = reader.ReadVector2();
         }
 
-        public override void Write(DataContext ctx, BinaryWriter writer)
+        protected override void Write(CelesteNetBinaryWriter writer)
         {
             writer.Write(Facing);
             writer.Write(CursorPos);

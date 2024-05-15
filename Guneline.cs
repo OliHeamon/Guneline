@@ -1,4 +1,7 @@
-﻿using Celeste;
+﻿using System;
+using System.Linq;
+using System.Reflection;
+using Celeste;
 using Celeste.Mod;
 using Celeste.Mod.CelesteNet;
 using Celeste.Mod.CelesteNet.Client;
@@ -6,15 +9,12 @@ using Celeste.Mod.CelesteNet.Client.Entities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Monocle;
-using System;
-using System.Linq;
-using System.Reflection;
 
 namespace Guneline
 {
     public class Guneline : EverestModule
     {
-        public static Guneline Instance;
+        public static Guneline Instance { get; private set; }
 
         public override Type SettingsType => typeof(GunSettings);
 
@@ -120,9 +120,18 @@ namespace Guneline
             gunTexture = GFX.Game["DontConflictPlease/Gun"];
         }
 
-        public override void OnInputInitialize() => GunInput.RegisterInputs();
 
-        public override void OnInputDeregister() => GunInput.DeregisterInputs();
+        public override void OnInputInitialize()
+        {
+            base.OnInputInitialize();
+            GunInput.RegisterInputs();
+        }
+
+        public override void OnInputDeregister()
+        {
+            base.OnInputDeregister();
+            GunInput.DeregisterInputs();
+        }
 
         public override void Load()
         {

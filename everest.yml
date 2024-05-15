@@ -1,6 +1,6 @@
 - Name: Guneline
   Version: 1.0.0
-  DLL: Guneline.dll
+  DLL: bin/Guneline.dll
   Dependencies:
-    - Name: Everest
-      Version: 1.0.0
+    - Name: EverestCore
+      Version: 1.4465.0
