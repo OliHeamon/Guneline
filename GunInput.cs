@@ -39,7 +39,7 @@ namespace Guneline
 
             if (joystickAim.Value.LengthSquared() > 0.04f && self.Scene != null)
             {
-                currentCursorPos = (self.Center + (joystickAim.Value * 70)) * 6;
+                currentCursorPos = (self.Center - (self.Scene as Level).Camera.Position + (joystickAim.Value * 70)) * 6;
             }
         }
 

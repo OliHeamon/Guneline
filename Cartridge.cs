@@ -1,7 +1,7 @@
-﻿using Celeste;
+﻿using System;
+using Celeste;
 using Microsoft.Xna.Framework;
 using Monocle;
-using System;
 
 namespace Guneline
 {
